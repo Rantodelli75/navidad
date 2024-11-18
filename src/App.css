@@ -1,0 +1,75 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+  background-color: #040B1D;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.root {
+  transform: rotate(-90deg);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Añadir media query para aplicar la rotación solo en orientación vertical */
+@media (orientation: portrait) {
+  #root {
+    transform: rotate(90deg);
+    width: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+
+  #contenedor {
+    height: calc(280vw * (360 / 1000));
+    width: calc(280vh * (360 / 1000));
+    transform: none;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    opacity: 1;
+    overflow: hidden;
+  }
+
+  /* Asegúrate de que las imágenes también ocupen toda la pantalla */
+  img {
+    width: 100%;
+    height: 100%;
+    transform: none;
+    object-fit: cover;
+  }
+}
+
+/* Estilos específicos para orientación vertical */
+@media (orientation: portrait) {
+  .fullscreen-modal {
+    top: 220px; /* Ajusta según sea necesario */
+  }
+}
+
+
